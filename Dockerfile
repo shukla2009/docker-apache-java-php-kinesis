@@ -12,7 +12,5 @@ COPY agent.json /etc/aws-kinesis/agent.json
 COPY ks /usr/local/bin
 RUN chmod +x /usr/local/bin/ks
 
-CMD ["ks"]
-
 
 
