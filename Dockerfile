@@ -1,4 +1,4 @@
-FROM shukla2009/apache-php-java
+FROM shukla2009/apache-java-php
 MAINTAINER Rahul Shukla <rahul@wootag.com>
 ENV DEBIAN_FRONTEND noninteractive
 
