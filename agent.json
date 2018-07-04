@@ -7,7 +7,7 @@
   "awsSecretAccessKey": "",
   "flows": [
     {
-      "filePattern": "/tmp/event.json",
+      "filePattern": "/tmp/event*.json",
       "initialPosition": "START_OF_FILE",
       "kinesisStream": "rahul_1"
     }
