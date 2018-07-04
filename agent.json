@@ -1,0 +1,15 @@
+{
+  "checkpointFile": "/tmp/aws-kinesis-agent-checkpoints/main.log",
+  "cloudwatch.emitMetrics": false,
+  "cloudwatch.endpoint": "https://monitoring.us-west-2.amazonaws.com",
+  "kinesis.endpoint": "https://kinesis.ap-southeast-1.amazonaws.com",
+  "awsAccessKeyId": "",
+  "awsSecretAccessKey": "",
+  "flows": [
+    {
+      "filePattern": "/tmp/event.json",
+      "initialPosition": "START_OF_FILE",
+      "kinesisStream": "rahul_1"
+    }
+  ]
+}
