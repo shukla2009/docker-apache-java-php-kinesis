@@ -1,0 +1,8 @@
+#!/bin/bash
+
+find /tmp/event_* -printf '%T+ %p\n' | sort -r | head | awk '{print $2}' > /tmp/filestomove
+for f in $(tail -n +2 /tmp/filestomove)
+do
+    aws s3 mv $f s3://wootag-stream-backup/wtstaging/3.0/
+done
+#tail -n +2 /tmp/filestomove | xargs aws s3 mv {} s3://wootag-stream-backup/wtstaging/3.0/

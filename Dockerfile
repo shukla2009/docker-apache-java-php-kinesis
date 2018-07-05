@@ -12,5 +12,9 @@ COPY agent.json /etc/aws-kinesis/agent.json
 COPY ks /usr/local/bin
 RUN chmod +x /usr/local/bin/ks
 
+RUN apt-get -y install python-pip
+RUN pip install awscli --upgrade --user
+RUN echo "export PATH=/root/.local/bin:$PATH" >> /root/.bashrc
 
-
+COPY uploadtos3 /etc/cron.daily/
+RUN chmod +x /etc/cron.daily/uploadtos3
